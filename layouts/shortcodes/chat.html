@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+<br>
+<hr> </hr>
+<h3>Comments <i class="fa fa-comments fa-2x" aria-hidden="true"></i> </h3> 
+<div id="comment-section"></div>
+<script>
+initComments({
+  node: document.getElementById("comment-section"),
+  defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+  serverName: "cactus.chat",
+  siteName: "MaxBlog",
+  commentSectionId: "{{ index .Params 0}}"
+})
+</script> 

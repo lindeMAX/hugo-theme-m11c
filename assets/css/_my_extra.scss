@@ -1,0 +1,142 @@
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+   border:2px solid $light-color !important;
+   th, td {
+      border-spacing: 0;
+      border:1px solid $light-color !important;
+   }
+}
+#body blockquote {
+   border-left: 5px solid rgba(255, 255, 255, 0.404);
+   padding-left: 0.85rem;
+}
+a {
+   line-height: 1.1;
+   display: inline-block;
+   color: $primary-color;
+}
+a:hover {
+   color: $primary-color;
+}
+a:after {
+   display: block;
+   content: "";
+   height: 1px;
+   width: 0%;
+   background-color: $primary-color-light;
+   -webkit-transition: width 0.5s ease;
+   -moz-transition: width 0.5s ease;
+   -ms-transition: width 0.5s ease;
+   transition: width 0.5s ease;
+}
+a, a:hover, a:focus {
+   text-decoration: none;
+   outline: 0;
+}
+a:hover:after, a:focus:after {
+   width: 100%;
+}
+hr {
+   border:1px;
+   border-style: solid;
+   color: $light-color;
+}
+
+.noteice_container {
+   width: 100%;
+}
+.notice_container::after {
+   content: "";
+   clear: both;
+   display: flex;
+}
+div.notices {
+   border-top-width: 2rem;
+   border-top-style: solid;
+   border-radius: 5px;
+   box-shadow: 2px 2px 2px 1px rgba(200, 200, 200, 0.2);
+   color: #ffffff;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+   margin: 1.5rem 0;
+   padding-bottom: .1px;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   // position: relative;
+   // left: 12.5%
+   width: 75%;
+   float: left;
+   padding: 5px;
+}
+div.notices > div.label {
+   color: #fff;
+   font-weight: normal;
+   margin-bottom: 1rem;
+   margin-top: -1.75rem;
+}
+div.notices > div.label:first-child:before {
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   margin-left: .35rem;
+   margin-right: .35rem;
+}
+div.notices.info {
+   border-color: #4897CC;
+   background-color: #2f4d61;
+}
+div.notices.info > div.label:first-child:before {
+   content: "\f05a";
+}
+div.notices.warning {
+   border-color: #D96A68 !important;
+   background-color: #5f3030 !important;
+}
+div.notices.warning > div.label:first-child:before {
+   content: "\f071";
+}
+div.notices.note {
+   border-color: #BF8B44;
+   background-color: #665532;
+}
+div.notices.note > div.label:first-child:before {
+   content: "\f06a";
+}
+div.notices.tip {
+   border-color: #5AA55A;
+   background-color: #254d25;
+}
+div.notices.tip > div.label:first-child:before {
+   content: "\f0eb";
+}
+
+.highlight {
+   border-radius: 5px;
+   box-shadow: 2px 2px 2px 1px rgba(200, 200, 200, 0.2);
+}
+
+.content_image {
+   border-radius: 5px;
+   box-shadow: 2px 2px 2px 1px rgba(200, 200, 200, 0.2);
+   background-color: rgba(200, 200, 200, 0.75);
+}
+
+.image_container {
+   width: 100%;
+}
+.image_container::after {
+   content: "";
+   clear: both;
+   display: flex;
+}
+.two_images {
+   float: left;
+   width: 50%;
+   padding: 5px;
+}
