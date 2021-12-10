@@ -1,12 +1,10 @@
-$darkest-color: {{ .Site.Params.style.darkestColor | default "#242930" }};
-$dark-color: {{ .Site.Params.style.darkColor | default "#353b43" }};
-$light-color: {{ .Site.Params.style.lightColor | default "#afbac4" }};
-$lightest-color: {{ .Site.Params.style.lightestColor | default "#ffffff" }};
-$primary-color: {{ .Site.Params.style.primaryColor | default "#57cc8a" }};
-$primary-color-light: {{ .Site.Params.style.primaryColorLight | default "#57cc8a" }};
+$primary-color: {{ .Site.Params.style.primaryColor | default "#e3c363" }};
+$text-color: {{ .Site.Params.style.textColor | default "#e5b361" }};
+$link-color: {{ .Site.Params.style.linkColor | default "#eee8e8" }};
+$background-color: {{ .Site.Params.style.backgroundColor | default "#46444B" }};
+$content-background-color: {{ .Site.Params.style.contentBackgroundColor | default "#322D39" }};
 
 @import 'base';
-
 @import 'components/app';
 @import 'components/error_404';
 @import 'components/icon';
@@ -15,7 +13,6 @@ $primary-color-light: {{ .Site.Params.style.primaryColorLight | default "#57cc8a
 @import 'components/posts_list';
 @import 'components/tag';
 @import 'components/tags_list';
-@import 'components/m11c';
 
 // The last 'extra' import can optionally be overridden on a per project
 // basis by creating a <HUGO_PROJECT>/assets/css/_extra.scss file.

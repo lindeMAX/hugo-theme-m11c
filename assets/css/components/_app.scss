@@ -1,7 +1,18 @@
 .app-header {
   padding: 2.5em;
-  background: $darkest-color;
+  background: $background-color;
   text-align: center;
+
+  a {
+    color: $primary-color;
+    font-size: larger;
+  }
+  a::after{
+    background-color: $primary-color;
+  }
+  h1 {
+    color: $text-color;
+  }
 }
 
 .app-header-avatar {
@@ -17,7 +28,7 @@
 
 .app-header-social {
   font-size: 2em;
-  color: $lightest-color;
+  color: $text-color;
 
   a {
     margin: 0 0.1em;

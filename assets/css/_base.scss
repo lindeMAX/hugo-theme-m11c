@@ -9,22 +9,45 @@ html {
 body {
   margin: 0;
   font-family: sans-serif;
-  background: $dark-color;
-  color: $light-color;
+  background: $content-background-color;
+  color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $lightest-color;
+  color: $primary-color;
 }
 
 a {
-  color: $primary-color;
   transition: color 0.35s;
   text-decoration: none;
+  line-height: 1.1;
+  display: inline-block;
+  color: $link-color;
+}
+a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: $link-color;
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -ms-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+a, a:hover, a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+a:hover:after, a:focus:after {
+  width: 100%;
+}
 
-  &:hover {
-    color: $lightest-color;
-  }
+hr {
+  border:1px;
+  border-style: solid;
+  color: $text-color;
+  opacity: 0.5;
 }
 
 // Browsers seem to use a smaller default font-size with monospaced code
@@ -34,7 +57,7 @@ a {
 code {
   font-family: monospace,monospace;
   font-size: 1em;
-  color: rgba($light-color, .8);
+  color: rgba($text-color, .8);
 }
 
 pre {
@@ -52,8 +75,15 @@ pre {
 }
 
 ::selection {
-  background: rgba($light-color, .25);
+  background: rgba($text-color, .25);
 }
 ::-moz-selection {
-  background: rgba($light-color, .25);
+  background: rgba($text-color, .25);
+}
+
+code.has-jax {
+  -webkit-font-smoothing: antialiased;
+  background: inherit !important;
+  border: none !important;
+  font-size: 100%;
 }
