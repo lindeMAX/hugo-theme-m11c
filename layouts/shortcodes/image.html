@@ -1,0 +1,17 @@
+{{ $src := .Get 0}}
+{{ $caption := .Get 1 }}
+{{ $width := .Get 2 }}
+<figure>
+	<div class="image">
+		<a href="{{ $src }}" data-featherlight="image" style="width: {{ $width }};"><img src="{{ $src }}" style="height: auto;"></a>
+   		<figcaption>
+			<small>
+			    {{ with .Inner }}
+			    {{ . }}
+			    {{ else }}
+			    <i> {{ $caption }} </i>
+			    {{ end }}
+			</small>
+   		</figcaption>
+	</div>
+</figure>

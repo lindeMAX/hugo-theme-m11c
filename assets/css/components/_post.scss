@@ -77,15 +77,15 @@ div.notices.warning > div.label:first-child:before {
   content: "\f071";
 }
 div.notices.note {
-  border-color: rgba(#BF8B44, 0.8);
-  background-color: rgba(#665532, 0.8);
+  border-color: rgba(#BF8B44, 0.75);
+  background-color: rgba(#665532, 0.75);
 }
 div.notices.note > div.label:first-child:before {
   content: "\f06a";
 }
 div.notices.tip {
-  border-color: #5AA55A;
-  background-color: #254d25;
+  border-color: rgba(#5AA55A, 0.75);
+  background-color: rgba(#254d25, 0.75);
 }
 div.notices.tip > div.label:first-child:before {
   content: "\f0eb";

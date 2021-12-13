@@ -17,39 +17,73 @@
 
     {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   </head>
   <body id="body">
-    <header class="app-header">
-      <a href="{{ .Site.BaseURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-      <h1>{{ .Site.Title }}</h1>
-      {{- with .Site.Menus.main }}
-      <nav class="app-header-menu">
-        {{- range $key, $item := . }}
-          {{- if ne $key 0 }}
-            {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
-          {{ end }}
-          <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
+    <div id="fadeshow">
+      <header class="app-header">
+        <a href="{{ .Site.BaseURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
+        <h1>{{ .Site.Title }}</h1>
+        {{- with .Site.Menus.main }}
+        <nav class="app-header-menu">
+          {{- range $key, $item := . }}
+            {{- if ne $key 0 }}
+              {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
+            {{ end }}
+            <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
+          {{- end }}
+        </nav>
         {{- end }}
-      </nav>
-      {{- end }}
-      <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
-      <p>{{ .Site.Params.donation_text | default "" }}</p>
-      <p>{{ .Site.Params.license_text | default "" }}</p>
-      {{- with .Site.Params.social }}
-      <div class="app-header-social">
-        {{ range . }}
-          <a href="{{ .url }}" target="_blank" rel="noreferrer noopener">
-            {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .name) }}
-          </a>
-        {{ end }}
-        {{ partial "donate.html" }}
-      </div>
-      {{- end }}
-    </header>
+        <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
+        <p>{{ .Site.Params.donation_text | default "" }}</p>
+        <p>{{ .Site.Params.license_text | default "" }}</p>
+        {{- with .Site.Params.social }}
+        <div class="app-header-social">
+          {{ range . }}
+            <a href="{{ .url }}" target="_blank" rel="noreferrer noopener">
+              {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .name) }}
+            </a>
+          {{ end }}
+          {{ partial "donate.html" }}
+        </div>
+        {{- end }}
+      </header>
+    </div>
     <main class="app-container">
+      <div id="burger">
+        <input type="checkbox" id="hamburger" {{ if .IsHome }}{{ printf "%s" "checked" }}{{ end }}>
+        <label for="hamburger" class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </label>
+      </div>
       {{ block "main" . }}
         {{ .Content }}
       {{ end }}
     </main>
+    <script>
+      hamburger.onclick = function () {
+        this.classList.toggle ("checked");
+        if (hamburger.checked) {
+          //fadeshow.style.height = "auto";
+          //fadeshow.style.opacity = "1";
+          fadeshow.style.display = "block";
+        }
+        else {
+          //fadeshow.style.height = "0px";
+          //fadeshow.style.opacity = "0";
+          fadeshow.style.display = "none";
+        }
+      }
+    </script>
+    {{ if .IsHome }}
+    <script>
+      console.log("Is Home!");
+      fadeshow.style.display = "block";
+    </script>
+    {{ end }}
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

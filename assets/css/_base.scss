@@ -17,6 +17,78 @@ h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
 }
 
+@media (min-width: 960px) {
+  .app-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    min-height: 100vh;
+  }
+  .app-container {
+    max-width: 65rem;
+    margin-left: 20rem;
+  }
+  #fadeshow {
+    display: block;
+  }
+  #burger {
+    display: none;
+  }
+}
+
+@media (max-width: 961px) {
+  #fadeshow {
+    display: none;
+  }
+  #burger {
+    display: block;
+  }
+}
+
+#burger {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.line { 
+  display: block;
+  position: relative;
+  top: 0;
+  left:4px;
+  height: 4px; width: 30px; 
+  background: $link-color; border-radius: 2px;
+  transition: 0.5s; 
+  transform-origin: center; 
+}
+
+.line:nth-child(1) { top: 5px; }
+.line:nth-child(2) { top: 10px; }
+.line:nth-child(3) { top: 15px; }
+
+label.hamburger { 
+  display: block;
+  position: relative; 
+  margin-left: auto; margin-right: auto;
+  border-radius: 4px; 
+}
+
+input#hamburger {
+  display: none;
+}
+
+#hamburger:checked + .hamburger .line:nth-child(1){
+  transform: translateY(9px) rotate(-45deg);
+}
+#hamburger:checked + .hamburger .line:nth-child(2){
+  opacity:0;
+}
+#hamburger:checked + .hamburger .line:nth-child(3){
+  transform: translateY(-9px) rotate(45deg);
+}
+
 a {
   transition: color 0.35s;
   text-decoration: none;
@@ -86,4 +158,9 @@ code.has-jax {
   background: inherit !important;
   border: none !important;
   font-size: 100%;
+}
+
+.image {
+  align-items: center;
+  text-align: center;
 }
