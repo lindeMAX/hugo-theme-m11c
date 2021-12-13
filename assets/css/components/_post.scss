@@ -1,20 +1,15 @@
-.post-title {
-  color: $primary-color;
-}
-
 .post-content {
   & > pre,
   .highlight {
     margin: 1em 0;
   }
-
   & > pre,
   .highlight > pre,
   .highlight > div {
-    border-left: 0.4em solid rgba($background-color, .8);
+    border-left-style: solid;
+    border-left-width: 0.4em;
     padding: .5em 1em;
   }
-
   img {
     max-width: 100%;
   }
@@ -122,11 +117,13 @@ div.notices.tip > div.label:first-child:before {
 }
 
 table {
- border-collapse: collapse;
- border-spacing: 0;
- border:2px solid $text-color !important;
- th, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 2px;
+  border-style: solid;
+  th, td {
     border-spacing: 0;
-    border:1px solid $text-color !important;
- }
+    border-width: 2px;
+    border-style: solid;
+  }
 }

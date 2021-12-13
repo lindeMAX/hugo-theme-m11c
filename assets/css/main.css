@@ -1,0 +1,25 @@
+.dark-theme {
+    --primary-color: {{ .Site.Params.style.primaryColor }};
+    --secondary-color: {{ .Site.Params.style.secondaryColor }};
+    --text-color: {{ .Site.Params.style.textColor }};
+    --background-color: {{ .Site.Params.style.backgroundColor }};
+    --header-background-color: {{ .Site.Params.style.headerBackgroundColor }};
+}
+.light-theme {
+    --primary-color: {{ .Site.Params.style.primaryColorLight }};
+    --secondary-color: {{ .Site.Params.style.secondaryColorLight }};
+    --text-color: {{ .Site.Params.style.textColorLight }};
+    --background-color: {{ .Site.Params.style.backgroundColorLight }};
+    --header-background-color: {{ .Site.Params.style.headerBackgroundColorLight }};
+}
+
+@import 'base';
+@import 'components/app';
+@import 'components/error_404';
+@import 'components/icon';
+@import 'components/pagination';
+@import 'components/post';
+@import 'components/posts_list';
+@import 'components/tag';
+@import 'components/tags_list';
+@import 'components/colors';

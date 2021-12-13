@@ -1,17 +1,8 @@
 .app-header {
   padding: 2.5em;
-  background: $background-color;
   text-align: center;
-
   a {
-    color: $primary-color;
     font-size: larger;
-  }
-  a::after{
-    background-color: $primary-color;
-  }
-  h1 {
-    color: $text-color;
   }
 }
 
@@ -19,7 +10,8 @@
   width: 15rem;
   height: 15rem;
   border-radius: 100%;
-  border: 0.2rem solid $primary-color;
+  border-width: 0.2rem;
+  border-style: solid;
 }
 
 .app-container {
@@ -28,8 +20,6 @@
 
 .app-header-social {
   font-size: 2em;
-  color: $text-color;
-
   a {
     margin: 0 0.1em;
   }

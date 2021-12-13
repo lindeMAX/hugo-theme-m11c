@@ -1,0 +1,78 @@
+@media (prefers-color-scheme: dark) {
+    /* Light theme styles go here */
+    body {
+        background: $background-color;
+        color: $text-color;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary-color;
+    }
+    .post-title {
+        color: $primary-color;
+    }
+    .post-content {
+        & > pre,
+        .highlight > pre,
+        .highlight > div {
+          border-left-color: rgba($header-background-color, .8);
+        }
+    }
+    .line {
+        background: $secondary-color;
+    }
+    .tag {
+        background: rgba(200, 200, 200, 0.1);
+        &:hover {
+          background: rgba(200, 200, 200, 0.3);
+        }
+    }
+    .tags-list-item {
+        &:not(:last-child) {
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+    a {
+        color: $secondary-color;
+    }
+    a:after {
+        background-color: $secondary-color;
+    }
+    hr {
+        color: $text-color;
+    }
+    code {
+        color: rgba($text-color, .8);
+    }
+    ::selection {
+        background: rgba($text-color, .25);
+    }
+    ::-moz-selection {
+        background: rgba($text-color, .25);
+    }
+    .app-header {
+        background: $header-background-color;
+        a {
+          color: $primary-color;
+        }
+        a::after{
+          background-color: $primary-color;
+        }
+        h1 {
+          color: $text-color;
+        }
+    }
+    .app-header-avatar {
+        border-color: $primary-color;
+    }
+    .app-header-social {
+        color: $text-color;
+    }
+    .page-item {
+        &.active {
+            .page-link {
+                color: $text-color;
+                background: $primary-color;
+            }
+        }
+    }
+}

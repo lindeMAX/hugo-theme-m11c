@@ -9,12 +9,6 @@ html {
 body {
   margin: 0;
   font-family: sans-serif;
-  background: $content-background-color;
-  color: $text-color;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $primary-color;
 }
 
 @media (min-width: 960px) {
@@ -59,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left:4px;
   height: 4px; width: 30px; 
-  background: $link-color; border-radius: 2px;
+  border-radius: 2px;
   transition: 0.5s; 
   transform-origin: center; 
 }
@@ -94,14 +88,12 @@ a {
   text-decoration: none;
   line-height: 1.1;
   display: inline-block;
-  color: $link-color;
 }
 a:after {
   display: block;
   content: "";
   height: 1px;
   width: 0%;
-  background-color: $link-color;
   -webkit-transition: width 0.5s ease;
   -moz-transition: width 0.5s ease;
   -ms-transition: width 0.5s ease;
@@ -114,11 +106,9 @@ a, a:hover, a:focus {
 a:hover:after, a:focus:after {
   width: 100%;
 }
-
 hr {
   border:1px;
   border-style: solid;
-  color: $text-color;
   opacity: 0.5;
 }
 
@@ -129,7 +119,6 @@ hr {
 code {
   font-family: monospace,monospace;
   font-size: 1em;
-  color: rgba($text-color, .8);
 }
 
 pre {
@@ -144,13 +133,6 @@ pre {
   code {
     font-size: .8em;
   }
-}
-
-::selection {
-  background: rgba($text-color, .25);
-}
-::-moz-selection {
-  background: rgba($text-color, .25);
 }
 
 code.has-jax {

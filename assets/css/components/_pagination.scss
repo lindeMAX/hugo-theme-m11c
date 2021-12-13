@@ -13,12 +13,9 @@
     display: block;
     padding: 0.285em 0.8em;
   }
-
   &.active {
     .page-link {
-      color: $text-color;
       border-radius: 2em;
-      background: $primary-color;
     }
   }
 }
