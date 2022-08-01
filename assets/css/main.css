@@ -1,16 +1,25 @@
-.dark-theme {
+/* To prevent screen flashing on loading page */
+#body {
     --primary-color: {{ .Site.Params.style.primaryColor }};
     --secondary-color: {{ .Site.Params.style.secondaryColor }};
     --text-color: {{ .Site.Params.style.textColor }};
     --background-color: {{ .Site.Params.style.backgroundColor }};
     --header-background-color: {{ .Site.Params.style.headerBackgroundColor }};
 }
+
+.dark-theme {
+    --primary-color: {{ .Site.Params.style.primaryColor }} !important;
+    --secondary-color: {{ .Site.Params.style.secondaryColor }} !important;
+    --text-color: {{ .Site.Params.style.textColor }} !important;
+    --background-color: {{ .Site.Params.style.backgroundColor }} !important;
+    --header-background-color: {{ .Site.Params.style.headerBackgroundColor }} !important;
+}
 .light-theme {
-    --primary-color: {{ .Site.Params.style.primaryColorLight }};
-    --secondary-color: {{ .Site.Params.style.secondaryColorLight }};
-    --text-color: {{ .Site.Params.style.textColorLight }};
-    --background-color: {{ .Site.Params.style.backgroundColorLight }};
-    --header-background-color: {{ .Site.Params.style.headerBackgroundColorLight }};
+    --primary-color: {{ .Site.Params.style.primaryColorLight }} !important;
+    --secondary-color: {{ .Site.Params.style.secondaryColorLight }} !important;
+    --text-color: {{ .Site.Params.style.textColorLight }} !important;
+    --background-color: {{ .Site.Params.style.backgroundColorLight }} !important;
+    --header-background-color: {{ .Site.Params.style.headerBackgroundColorLight }} !important;
 }
 
 @import 'base';

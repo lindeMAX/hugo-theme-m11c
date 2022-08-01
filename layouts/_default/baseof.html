@@ -47,10 +47,10 @@
           {{ partial "donate.html" }}
         </div>
         {{- end }}
-        <select id="theme-selector">
-          <option value="dark-theme">Dark Theme</option>
-          <option value="light-theme">Light Theme</option>
-        </select>
+        <div id="theme">
+        <input type="checkbox" id="themeToggle"></input>
+        <label for="themeToggle" class="themeToggle"><i class="fa fa-adjust fa-2x" aria-hidden="true"></i></label>
+      </div>
       </header>
     </div>
     <main class="app-container">
